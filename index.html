@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Spotify</title>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <div class="top-nav">
+                <div class="top-arrows">
+                    <div class="left-arrow">
+                        <img src="./svgs/left-arrow.svg" alt="">
+                    </div>
+                    <div class="right-arrow">
+                        <img src="./svgs/right-arrow.svg" alt="">
+                    </div>
+                </div>
+                <div id="account-settings" class="account">
+                    <img class="account-profile" src="./images/user-profile.svg" alt="">
+                    <p class="account-name">usertesting</p>
+                    <img id="down-arrow" class="account-down-arrow" src="./svgs/down-arrow.svg" alt="">
+                    <!-- <img id="up-arrow" class="account-down-arrow" src="./svgs/up-arrow.svg" alt=""> -->
+                </div>
+                <div id="account-popup" class="popup">
+                    <ul>
+                        <li><a onclick="accountClicked()" href="#">Account</a></li>
+                        <li><a onclick="accountClicked()" href="#">Profile</a></li>
+                        <li><a onclick="accountClicked()" href="#">Private Session</a></li>
+                        <li><a onclick="accountClicked()" href="#">Settings</a></li>
+                        <li><a onclick="accountClicked()" href="#">Log out</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="playlist">
+            <img src="./images/active-song-profile.svg" alt="">
+            <div class="playlist-info">
+                <p class="public-playlist">Public Playlist</p>
+                <h1 class="playlist-title">Glass Animals Mix</h1>
+                <h2 class="playlist-artists">B<span>&Oslash</span>RNS, Tame Impala, Phantogram <span>and more</span> </h2>
+                <h3 class="playlist-length">Made for <span>usertesting &#8226</span> 50 songs, 3hrs 14min </h3>
+            </div>
+        </section>
+
+
+        <section class="buttons">
+            <div class="song-buttons">
+                <div id="play-pause" class="playBtn-background">
+                    <img id="play" class="playBtn" src="./svgs/playBtn.svg" alt="">
+                    <img id="pause" class="pauseBtn" src="./svgs/pauseBtn.svg" alt="">
+                </div>
+                <div class="extra-buttons">
+                    <img class="empty-heart" id="empty-heart" src="./svgs/empty-heart.svg" alt="">
+                    <img class="empty-heart disliked" id="filled-heart" src="./svgs/filled-heart.svg" alt="">
+                    <!-- I am having an issue with the heart button - There is a random line in the heart when I copied it as an svg from the figma file-->
+                    <img class="cloud" src="./svgs/empty-cloud.svg" alt="">
+                    <img class="three-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+            <div class="buttons-settings">
+                <img class="search-icon" src="./svgs/search.svg" alt="">
+                <p>Custom order</p>
+                <img class="button-arrow" src="./svgs/down-arrow.svg" alt="">
+            </div>
+        </section>
+
+        <section class="heading-section">
+            <div class="headings">
+                <p class="number-heading">#</p>
+                <p class="title-heading">Title</p>
+                <div class="song-info-heading">
+                    <p class="album-name-heading">Album</p>
+                    <p class="date-added-heading">DATE ADDED</p>
+                    <img class="clock-icon" src="./svgs/clock.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="song-list">
+            <div id="song1" class="songs">
+                <div class="song-number">
+                    <p>1</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div  class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/space-ghost.svg" alt="">
+                <div class="song-artists">
+                    <h4>Space Ghost Coast To Coast</h4>
+                    <h5>Glass Animals</h5>
+                </div>
+                <div class="song-info">
+                    <p class="song-album">Dreamland(+Bonus Levels)</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img id="like-song" class="filled-heart saved" src="./svgs/filled-heart.svg" alt="">
+                    <img id="like-song" class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"> <span>&#8226</span> 3:07</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+
+            <div id="song2" class="songs">
+                <div class="song-number">
+                    <p>2</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/electriclove.svg" alt="">
+                <div class="song-artists">
+                    <h4>Electric Love</h4>
+                    <h5>B<span>&Oslash</span>RNS</h5>
+                </div>
+                <div class="song-info">
+                    <p class="song-album">Dopamine</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img id="like-song" class="filled-heart saved song-saved" src="./svgs/filled-heart.svg" alt="">
+                    <img id="like-song" class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>3:38</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+            <div id="song3" class="songs">
+                <div class="song-number">
+                    <p>3</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/gooey.svg" alt="">
+                <div class="song-artists">
+                    <h4>Gooey</h4>
+                    <h5>Glass Animals</h5>
+                </div>
+                <div class="song-info">
+                    <p class="song-album">ZABA(Deluxe)</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img class="filled-heart saved" src="./svgs/filled-heart.svg" alt="">
+                    <img class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>4.49</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+
+            <div id="song4" class="songs">
+                <div class="song-number">
+                    <p>4</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/borderline.svg" alt="">
+                <div class="song-artists">
+                    <h4>Borderline</h4>
+                    <h5>Tame Impala</h5>
+                </div>
+                <div class="song-info" >
+                    <p class="song-album">The Slow Rush</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img class="filled-heart saved" src="./svgs/filled-heart.svg" alt="">
+                    <img class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length "><span>&#8226</span>3:58</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+
+            <div id="song5" class="songs">
+                <div class="song-number">
+                    <p>5</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/othersideofparadise.svg" alt="">
+                <div class="song-artists">
+                    <h4>The Other Side of Paradise</h4>
+                    <h5>Glass Animals</h5>
+                </div>
+                <div class="song-info" >
+                    <p class="song-album">How To Be A Human Being</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img id="like-song" class="filled-heart saved" src="./svgs/filled-heart.svg" alt="">
+                    <img id="like-song" class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>5:21</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+
+            <div id="song6" class="songs">
+                <div class="song-number">
+                    <p>6</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/dontmove.svg" alt="">
+                <div class="song-artists">
+                    <h4>Don't Move</h4>
+                    <h5>Phantogram</h5>
+                </div>
+                <div class="song-info" >
+                    <p class="song-album">Nightlife</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img class="filled-heart saved" src="./svgs/filled-heart.svg" alt="">
+                    <img class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>4:18</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+            <div id="song7" class="songs">
+                <div class="song-number">
+                    <p>7</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/heatwaves.svg" alt="">
+                <div class="song-artists">
+                    <h4>Heat Waves</h4>
+                    <h5>Glass Animals</h5>
+                </div>
+                <div class="song-info" >
+                    <p class="song-album">Dreamland(+ Bonus Levels)</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img id="like-song" class="filled-heart saved song-saved" src="./svgs/filled-heart.svg" alt="">
+                    <img id="like-song" class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>3:59</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+            <div id="song8" class="songs">
+                <div class="song-number">
+                    <p>8</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/cooks.svg" alt="">
+                <div class="song-artists">
+                    <h4>Cooks</h4>
+                    <h5>Still Woozy</h5>
+                </div>
+                <div class="song-info" >
+                    <p class="song-album">Cooks</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img class="filled-heart saved" src="./svgs/filled-heart.svg" alt="">
+                    <img class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>2:54</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+            <div id="song9" class="songs">
+                <div class="song-number">
+                    <p>9</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/takeaslice.svg" alt="">
+                <div class="song-artists">
+                    <h4>Take a Slice</h4>
+                    <h5>Glass Animals</h5>
+                </div>
+                <div class="song-info">
+                    <p class="song-album">How To Be A Human Being</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img class="filled-heart saved" src="./svgs/filled-heart.svg" alt="">
+                    <img class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>3:50</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+            <div id="song10" class="songs">
+                <div class="song-number">
+                    <p>10</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/onlygobackwards.svg" alt="">
+                <div class="song-artists">
+                    <h4>Feels Like We Only Go Backwards</h4>
+                    <h5>Tame Impala</h5>
+                </div>
+                <div class="song-info">
+                    <p class="song-album">Lonerism</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img id="like-song" class="filled-heart saved song-saved" src="./svgs/filled-heart.svg" alt="">
+                    <img id="like-song" class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>3:13</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+            <div id="song11" class="songs">
+                <div class="song-number">
+                    <p>11</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/lava.svg" alt="">
+                <div class="song-artists">
+                    <h4>Lava</h4>
+                    <h5>Still Woozy</h5>
+                </div>
+                <div class="song-info" >
+                    <p class="song-album">Lately EP</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img id="like-song" class="filled-heart saved song-saved" src="./svgs/filled-heart.svg" alt="">
+                    <img id="like-song" class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>2:37</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+            <div id="song12" class="songs">
+                <div class="song-number">
+                    <p>12</p>
+                    <!-- <img src="./svgs/song-active.svg" alt=""> -->
+                    <div class="sound-bars">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bar4"></div>
+                    </div>
+                </div>
+                <img class="song-thumbnail" src="./song-thumbnails/americanmoney.svg" alt="">
+                <div class="song-artists">
+                    <h4>American Money</h4>
+                    <h5>B<span>&Oslash</span>RNS</h5>
+                </div>
+                <div class="song-info">
+                    <p class="song-album">Dopamine</p>
+                    <p class="song-date-added">2 months ago</p>
+                    <img id="like-song" class="filled-heart saved song-saved" src="./svgs/filled-heart.svg" alt="">
+                    <img id="like-song" class="filled-heart hover-heart" src="./svgs/empty-heart.svg" alt="">
+                    <p class="song-length"><span>&#8226</span>4:21</p>
+                    <img class="song-dots hover-dots" src="./svgs/three-dots.svg" alt="">
+                </div>
+            </div>
+
+
+
+        
+        </section>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>
