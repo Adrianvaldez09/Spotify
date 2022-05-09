@@ -14,6 +14,13 @@ Save song button (small heart that appears when hovering on a song)
 Account profile picture and username at the top right of the screen
 
 
+Dropdown menu links:
+
+Live link
+Github Gist
+Repository
+Portfolio
+
 
 
 
