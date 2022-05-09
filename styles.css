@@ -205,7 +205,7 @@ header{
     width: 100%;
 }
 .account-settings ul li a:hover{
-    color: red;
+    color: #65D46E;
 }
 
 
@@ -692,6 +692,7 @@ left: 0.5%;
     color: white;
     font-family: Inter, "sans-serif";
     font-weight: normal;
+    margin-top: 5px;
 }
 
 
