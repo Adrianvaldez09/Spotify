@@ -17,9 +17,13 @@ Account profile picture and username at the top right of the screen
 Dropdown menu links:
 
 Live link
+
 Github Gist
+
 Repository
+
 Portfolio
+
 
 
 
